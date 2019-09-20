@@ -28,8 +28,6 @@ f.close()
 
 end_time = time.time()
 
-# print(f"{duplicates.duplicate_names}") #return number of names that are duplicates...
-# print(f"{duplicates.valueGreater()}") #returns the names with value greater than one.
 
 # print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")

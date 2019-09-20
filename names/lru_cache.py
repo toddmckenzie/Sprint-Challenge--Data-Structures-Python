@@ -52,7 +52,9 @@ class LRUCache:
       node = self.storage[key]
       node.value = [key, value]
       self.order.move_to_front(node)
+      self.duplicate_names = self.duplicate_names + 1
       print(key, ' the key is in here ', str(value))
+      print(self.duplicate_names)
       return 
     if self.size == self.limit:
       del self.storage[self.order.tail.value[0]]
