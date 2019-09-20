@@ -42,6 +42,31 @@ class LinkedList:
     # if we've gotten here, then the target node isn't in our list
     return False
 
+  # thought process:  start at head and add to head the value, keep moving down the line and adding to head.  
+  # setting the value of the head to the previous value at the head....
+  # while true that self.next != None: add to head: when it does == None add it to the head and break....
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+    flag = True
+    if self.head:
+      node = self.head
+    if self.head:
+      while flag:
+        if not node.next_node:
+          self.add_to_head(node.value)
+          flag = False
+          break
+        else:
+          self.add_to_head(node.value)
+          node = node.get_next()
+
+
+#   Inside of the `reverse` directory, you'll find a basic implementation of a Singly Linked List. _Without_ making it a Doubly Linked List (adding a tail attribute), complete the `reverse_list()` function within `reverse/reverse.py` reverse the contents of the list. 
+
+# For example,
+# ```
+# 1->2->3->None
+# ```
+# would become...
+# ```
+# 3->2->1->None
+# ```

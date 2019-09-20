@@ -12,7 +12,7 @@ class RingBuffer:
         self.storage[i] = item
         flag = False
         break
-    if self.storage[len(self.storage) - 1] != None:
+    if self.storage[len(self.storage) - 1] != None: #finds min value to be replaced.... Or oldest.
       for i in range(len(self.storage)):
         if ord(self.storage[i]) < minValue:
           minValue = ord(self.storage[i])
