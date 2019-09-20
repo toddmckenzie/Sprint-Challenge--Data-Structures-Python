@@ -1,0 +1,1 @@
+self.list.head.get_next().value
