@@ -28,7 +28,7 @@ class LRUCache:
       self.order.move_to_front(node)
       return node.value[1]
     else:
-      return None
+      return 0
 
   
   def valueGreater(self):
@@ -48,11 +48,11 @@ class LRUCache:
 #   the newly-specified value. 
 
   def set(self, key, value):
-  
     if key in self.storage:
       node = self.storage[key]
       node.value = [key, value]
       self.order.move_to_front(node)
+      print(key, ' the key is in here ', str(value))
       return 
     if self.size == self.limit:
       del self.storage[self.order.tail.value[0]]
